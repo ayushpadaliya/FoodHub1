@@ -132,10 +132,10 @@ ImageView facebook;
             @Override
             public void onClick(View v) {
                     checkUser();
+                    finishAffinity();
             }
         });
 
-        // Add code to print out the key hash
         try {
             PackageInfo info = getPackageManager().getPackageInfo("com.example.foodhub", PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {
@@ -149,11 +149,6 @@ ImageView facebook;
             Log.e("KeyHash:", e.toString());
         }
     }
-    private void facebookLogin() {
-
-
-    }
-
     private void loginUserAccount() {
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken("990064800255-1vqaeb9vqii1skg88g8064hgcrd1447p.apps.googleusercontent.com")
@@ -161,13 +156,10 @@ ImageView facebook;
                 .build();
         googleSignInClient = GoogleSignIn.getClient(LoginActivity.this, googleSignInOptions);
         Intent intent = googleSignInClient.getSignInIntent();
-        startActivityForResult(intent, 100);
+        startActivityForResult(intent, 200);
         mAuth = FirebaseAuth.getInstance();
-        // Initialize firebase user
         FirebaseUser firebaseUser = mAuth.getCurrentUser();
-        // Check condition
         if (firebaseUser != null) {
-            // When user already sign in redirect to profile activity
             startActivity(new Intent(LoginActivity.this, LandingActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         }
 
@@ -176,13 +168,11 @@ ImageView facebook;
     {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
-            // Name, email address, and profile photo Url
             String name = user.getDisplayName();
             String email = user.getEmail();
             Uri photoUrl = user.getPhotoUrl();
             VariableBag.pathImage=photoUrl;
             Toast.makeText(this, "perfect", Toast.LENGTH_SHORT).show();
-            // Check if user's email is verified
             Intent i=new Intent(new Intent(LoginActivity.this, LandingActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             startActivity(i);
             boolean emailVerified = user.isEmailVerified();
@@ -197,24 +187,18 @@ ImageView facebook;
         super.onActivityResult(requestCode, resultCode, data);
         mCallbackManager.onActivityResult(requestCode,resultCode,data);
         Log.d("callBack","");
-        if (requestCode==100)
+        if (requestCode==200)
         {
             Task<GoogleSignInAccount> signInAccountTask = GoogleSignIn.getSignedInAccountFromIntent(data);
             if (signInAccountTask.isSuccessful()) {
-                // When google sign in successful initialize string
                 String s = "Google sign in successful";
                 account=signInAccountTask.getResult();
                 Uri path=account.getPhotoUrl();
-                // Display Toast
-                // Initialize sign in account
+
                 try {
-                    // Initialize sign in account
                     GoogleSignInAccount googleSignInAccount = signInAccountTask.getResult(ApiException.class);
-                    // Check condition
                     if (googleSignInAccount != null) {
-                        // When sign in account is not equal to null initialize auth credential
                         AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
-                        // Check credential
                         mAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -225,7 +209,7 @@ ImageView facebook;
                                     VariableBag.pathImage=path;
 //
                                     startActivity(i);
-                                    finish();
+                                    finishAffinity();
                                     Toast.makeText(LoginActivity.this, "Firebase authentication successful", Toast.LENGTH_SHORT).show();
                                 } else {
                                     // When task is unsuccessful display Toast
@@ -256,6 +240,7 @@ ImageView facebook;
                 if (task.isSuccessful())
                 {
                     startActivity(new Intent(LoginActivity.this, LandingActivity.class));
+                    finishAffinity();
                 }
                 else
                 {
