@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        android:backgroundTint="@color/white"
+        app:strokeColor="@color/white"
+        app:cardElevation="@dimen/_25ssp"
+        android:layout_marginTop="@dimen/_5ssp"
+        android:layout_marginStart="@dimen/_15ssp"
+        android:layout_marginEnd="@dimen/_15ssp"
+        android:layout_marginBottom="@dimen/_5ssp"
+        android:outlineSpotShadowColor="@color/transperent"
+        app:cardCornerRadius="@dimen/_15ssp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:paddingTop="@dimen/_7ssp"
+            android:paddingBottom="@dimen/_4ssp"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sub"
+                android:id="@+id/lastImage"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 Jun, 10:30"
+                android:id="@+id/txtName"
+                android:layout_marginTop="@dimen/_4ssp"
+                android:textColor="@color/lightFont"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/sofiareguler"
+                android:layout_marginStart="@dimen/_50sdp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dot"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:layout_marginStart="@dimen/_107sdp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 items"
+                android:layout_marginTop="@dimen/_4ssp"
+                android:textColor="@color/lightFont"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/sofiareguler"
+                android:layout_marginStart="@dimen/_120sdp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$17.10"
+                android:textColor="@color/MainColor"
+                android:textSize="@dimen/_18ssp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:gravity="top"
+                android:fontFamily="@font/sofiareguler"
+                android:layout_alignParentEnd="true"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtHeading"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_4ssp"
+                android:layout_below="@id/txtName"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/lastMainName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jimmy John’s"
+                    android:fontFamily="@font/semibold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/greenright"
+                    android:layout_below="@id/txtName"
+                    android:layout_marginStart="@dimen/_3ssp"
+                    android:layout_marginTop="@dimen/_7ssp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/greenround"
+                android:layout_below="@id/txtHeading"
+                android:layout_marginTop="@dimen/_8ssp"
+                android:layout_marginStart="@dimen/_50sdp"/>
+            <TextView
+                android:id="@+id/txtDeliver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHeading"
+                android:layout_marginStart="@dimen/_60sdp"
+                android:text="Order Delivered"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:textColor="@color/green"
+                android:fontFamily="@font/sofiareguler"
+                android:textSize="@dimen/_10ssp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ratee"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:layout_below="@id/txtDeliver"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reorder"
+                android:layout_below="@id/txtDeliver"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:layout_alignParentEnd="true"/>
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

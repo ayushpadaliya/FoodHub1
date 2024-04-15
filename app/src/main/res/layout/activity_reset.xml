@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.ResetActivity">
+
+    <ImageView
+        android:id="@+id/reset_round2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round2"/>
+    <ImageView
+        android:id="@+id/reset_round1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round1"/>
+    <ImageView
+        android:id="@+id/reset_round3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/round3"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:layout_margin="@dimen/_13ssp"/>
+    <TextView
+        android:id="@+id/reset_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Password"
+        android:fontFamily="@font/sofiabold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25ssp"
+        android:layout_below="@+id/reset_round2"
+        android:layout_marginTop="@dimen/_40ssp"
+        android:layout_marginStart="@dimen/_18ssp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reset_header"
+        android:id="@+id/reset_header2"
+        android:layout_marginTop="@dimen/_5ssp"
+        android:layout_marginStart="@dimen/_18ssp"
+        android:fontFamily="@font/sofiareguler"
+        android:text="Please enter your email address to\nrequest a password reset"
+        android:textColor="@color/lightFont"
+        android:textSize="@dimen/_13ssp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reset_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18ssp"
+        android:layout_marginEnd="@dimen/_18ssp"
+        android:layout_marginTop="@dimen/_14ssp"
+        android:layout_below="@+id/reset_header2"
+        app:boxCornerRadiusTopStart="@dimen/_8ssp"
+        app:boxCornerRadiusBottomEnd="@dimen/_8ssp"
+        app:boxCornerRadiusBottomStart="@dimen/_8ssp"
+        app:boxCornerRadiusTopEnd="@dimen/_8ssp"
+        android:elevation="@dimen/_15ssp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:outlineSpotShadowColor="@color/MainColor"
+        app:hintEnabled="false"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_18ssp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_17ssp"
+            android:textColorHint="@color/lightFont"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/sofiareguler"
+            android:hint="@string/your_email"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reset"
+        android:layout_below="@+id/reset_email"
+        android:layout_marginTop="@dimen/_25ssp"
+        android:layout_centerInParent="true"/>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.LastActivity">
+    <ImageView
+        android:id="@+id/lastPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pizzahut12"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_60sdp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lastPizza"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="@dimen/_10ssp"
+        android:text="How was your last\norder from Pizza Hut ?"
+        android:textSize="@dimen/_25sdp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/light"
+        android:id="@+id/lastHeader"/>
+    <TextView
+        android:id="@+id/lastStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lastHeader"
+        android:text="Good"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="#FE724C"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30ssp"/>
+    <RatingBar
+        android:id="@+id/LastRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15ssp"
+        android:progressTint="@color/yellow"
+        android:layout_below="@id/lastStatus"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightFont"
+        android:layout_below="@id/LastRatingBar"
+        android:hint="Write"
+        android:textColor="@color/lightFont"
+        android:fontFamily="@font/sofiareguler"
+        android:paddingBottom="@dimen/_12ssp"
+        android:layout_marginHorizontal="@dimen/_25ssp"
+        android:layout_marginTop="@dimen/_10ssp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/submit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

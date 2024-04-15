@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_marginHorizontal="@dimen/_19ssp"
+    android:layout_marginTop="@dimen/_15ssp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/_300sdp"
+        app:cardCornerRadius="0dp"
+        app:strokeColor="@color/white"
+        app:cardElevation="@dimen/_15ssp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/_8ssp"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/person1"
+                android:id="@+id/imgReview"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:background="@drawable/more" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alyce Lambo"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:layout_marginStart="@dimen/_55ssp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sofiareguler"
+                android:id="@+id/reviewName"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14ssp"
+                    android:background="@drawable/reviewyellowbg"
+                    android:paddingHorizontal="@dimen/_1ssp"
+                    android:layout_marginStart="@dimen/_20ssp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:paddingHorizontal="@dimen/_2ssp"
+                    android:paddingVertical="@dimen/_2ssp"
+                    android:layout_marginStart="@dimen/_35ssp"
+                    android:layout_marginTop="@dimen/_21ssp"
+                    android:textSize="@dimen/_8ssp"
+                    android:fontFamily="@font/semibold"
+                    android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_55ssp"
+                android:textColor="#B3B3B3"
+                android:textSize="@dimen/_10ssp"
+                android:text="25/06/2020"
+                android:fontFamily="@font/sofiareguler"
+                android:layout_below="@id/reviewName"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgReview"
+                android:textColor="#7F7D92"
+                android:lineSpacingExtra="@dimen/_2ssp"
+                android:fontFamily="@font/sofiareguler"
+                android:textAlignment="textStart"
+                android:layout_marginStart="@dimen/_5ssp"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:text="Really convenient and the points system helps benefit loyalty. Some mild glitches here and there, but nothing too egregious. Obviously needs to roll out to more remote."/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

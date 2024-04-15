@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Activity.Fragments.OrderFragment">
+    <ImageView
+        android:id="@+id/order_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:layout_marginStart="@dimen/_8ssp"
+        android:background="@drawable/back"/>
+    <TextView
+        android:id="@+id/order_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Orders"
+        android:layout_marginTop="@dimen/_20ssp"
+        android:textSize="@dimen/_17ssp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#111719"
+        android:fontFamily="@font/sofiamedium"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/profile"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_10ssp"/>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/order_back"
+        android:background="@drawable/upcomingback"
+        android:layout_marginHorizontal="@dimen/_25ssp"
+        android:layout_marginVertical="@dimen/_3ssp"
+        android:layout_height="wrap_content">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15ssp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        android:layout_marginHorizontal="@dimen/_10ssp"
+        app:tabIndicatorColor="@color/transperent"
+        android:backgroundTint="@color/white"
+        android:layout_centerInParent="true"
+        app:tabSelectedTextColor="@color/white"
+        app:tabBackground="@drawable/tab"
+        app:tabTextColor="@color/MainColor"/>
+    </RelativeLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative"
+        android:layout_marginTop="0dp"/>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/side_order"
+            android:title="My Orders"
+            android:icon="@drawable/sideorder"/>
+        <item
+            android:id="@+id/side_profile"
+            android:title="My Profile"
+            android:icon="@drawable/sideprofile"/>
+        <item
+            android:id="@+id/side_payment"
+            android:title="Delivery Address"
+            android:icon="@drawable/sidewallet"/>
+        <item
+            android:id="@+id/side_address"
+            android:title="Payment Methods"
+            android:icon="@drawable/sidelocation"/>
+        <item
+            android:id="@+id/side_contact"
+            android:title="Contact Us"
+            android:icon="@drawable/sidemessage"/>
+        <item
+            android:id="@+id/side_setting"
+            android:title="Settings"
+            android:icon="@drawable/sidesetting"/>
+        <item
+            android:id="@+id/side_help"
+            android:title="@string/helps_faqs"
+            android:icon="@drawable/sidehelp"/>
+    </group>
+</menu>

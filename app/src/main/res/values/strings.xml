@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FoodHub</string>
+    <string name="sign_in_with">sign in with</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_email">Your email</string>
+    <string name="sign_up_with">sign up with</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="helps_faqs"><![CDATA[Helps & FAQs]]></string>
+    <string name="open_navigation_drawer">open_navigation_drawer</string>
+    <string name="close_navigation_drawer">close_navigation_drawer</string>
+    <string name="track_order">Track Order</string>
+    <string name="min">min</string>
+
+    <string name="facebook_app_id">284544168031433</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">d595b0879f59eb3ba1a2135d69d11b28</string>
+
+
+    <string name="_25">25</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="@dimen/_25ssp"
+    android:id="@+id/relativeSidebar"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imageSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/sideorder"/>
+    <TextView
+        android:id="@+id/textSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15ssp"
+        android:textSize="@dimen/_15ssp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:paddingStart="@dimen/_20ssp"
+        android:fontFamily="@font/sofiareguler"
+        android:text="My Orders"/>
+
+</RelativeLayout>

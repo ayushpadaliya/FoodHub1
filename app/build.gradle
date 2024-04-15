@@ -1,0 +1,56 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+    id 'com.google.gms.google-services'
+
+}
+
+android {
+    namespace 'com.example.foodhub'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.foodhub"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation libs.sdp.android
+    implementation libs.ssp.android
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.glide
+    implementation libs.facebook.login
+    implementation(platform(libs.firebase.bom)
+    )
+    implementation libs.facebook.android.sdk
+
+    implementation "com.google.firebase:firebase-auth"
+
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.firebase.auth
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation libs.ccp
+    implementation libs.ccp.v260
+    implementation libs.firebase.auth.v1605
+    implementation libs.play.services.auth
+}

@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Circle -->
+    <item
+        android:drawable="@drawable/circle"
+        android:gravity="center">
+
+        <!-- Line -->
+        <bitmap
+            android:src="@drawable/line"
+            android:gravity="center" />
+
+    </item>
+</layer-list>

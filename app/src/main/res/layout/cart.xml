@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:strokeColor="@color/transperent"
+        app:cardPreventCornerOverlap="false"
+        app:cardElevation="@dimen/_25ssp"
+        android:layout_margin="@dimen/_5ssp"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="@dimen/_15ssp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/cartImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cartpizza"/>
+            <TextView
+                android:id="@+id/itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_98sdp"
+                android:layout_marginTop="@dimen/_18ssp"
+                android:text="Red n hot pizza"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sofiabold"/>
+            <TextView
+                android:id="@+id/itemDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemName"
+                android:layout_marginStart="@dimen/_98sdp"
+                android:textColor="#8C8A9D"
+                android:layout_marginTop="@dimen/_4ssp"
+                android:text="Spicy chicken, beef"
+                android:fontFamily="@font/light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemDescription"
+                android:layout_marginStart="@dimen/_98sdp"
+                android:text="$15.30"
+                android:textSize="@dimen/_17ssp"
+                android:textColor="@color/MainColor"
+                android:layout_marginTop="@dimen/_4ssp"
+                android:fontFamily="@font/sofiabold"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cancel"
+                android:layout_marginTop="@dimen/_20ssp"
+                android:layout_marginEnd="@dimen/_25ssp"
+                android:layout_alignParentEnd="true"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_25ssp"
+                android:layout_below="@id/itemDescription"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iconPlus"
+                android:layout_width="@dimen/_20ssp"
+                android:layout_gravity="center"
+
+                android:layout_height="@dimen/_20ssp"
+                android:background="@drawable/svgminus"
+        />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sofiabold"
+                    android:text="2"
+                    android:layout_marginStart="@dimen/_4ssp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20ssp" />
+            <ImageView
+                android:layout_width="@dimen/_20ssp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_4ssp"
+                android:layout_height="@dimen/_20ssp"
+                android:background="@drawable/svgplus"
+  />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.HomeScreenActivity">
+    <ImageView
+        android:id="@+id/home_sideIconx"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/_5ssp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sidebaricon"
+        android:layout_marginTop="@dimen/_15ssp"
+        android:layout_marginStart="@dimen/_15ssp"/>
+    <TextView
+        android:id="@+id/home_deliver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deliver to"
+        android:fontFamily="@font/sofiamedium"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/textgrey"
+        android:layout_marginTop="@dimen/_15ssp"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/path"
+        android:layout_toEndOf="@id/home_deliver"
+        android:layout_marginTop="@dimen/_25ssp"
+        android:layout_marginStart="@dimen/_5ssp"
+        android:padding="@dimen/_2ssp"/>
+    <TextView
+        android:id="@+id/home_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_deliver"
+        android:text="4102  Pretty View Lane "
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/sofiamedium"
+        android:textColor="@color/MainColor"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profile"
+        android:layout_marginTop="@dimen/_15ssp"
+        android:layout_alignParentEnd="true"/>
+
+
+
+
+
+</RelativeLayout>
